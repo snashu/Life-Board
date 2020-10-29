@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title> Snashu's Life Dashboard </title>
+</head>
+
+<body>
+    <div class="SnashuContainerMain" style="position: fixed; width: 100%; height: 100%; overflow: scroll;">
+        <h1 class="SnashuHeader"> Snashu's Life Dashboard </h1>
+        <div class="FinanceContainer">
+            <div class="SnashuMoney SnashuLifeCard" id="SnashuMoney">
+                <div>
+                    <span> Networth: $</span><span class="SnashuMoneyAmt" id="SnashuMoneyAmt"> </span>
+                </div>
+                <div>
+                    <span> With this money you can: </span>
+                    <br>
+                    <div style="font-size: 22px;">
+                        <span> -Take <span class="IndiaTrips" id="IndiaTrips"> </span> round trips to India with all of the money, or take <span id="IndiaTripsInterest" style="font-weight: bold"> </span> every year using only interest from investments. Check out flights <a href="https://www.google.com/flights?hl=en#flt=ORD.BLR.*BLR.ORD.;c:USD;e:1;sd:1;t:f"> here! </a> </span>
+                    </div>
+                    <div style="font-size: 22px;">
+                        <span> -Go on <span style="font-weight: bold" id="TotalDives"> </span> open water dives in beautiful places, or <span id="TotalDivesInterest" style="font-weight: bold"> </span> every year using only interest from investments. Check out dives <a href="https://locator.padi.com/search?lang=en&location=Puerto%20Rico"> here! </a> </span>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class="SnashuWork SnashuLifeCard" id="SnashuWork">
+                <div id="timeWorked">
+                    <span> You've been at EY for <span id="workYears"> </span> year and <span id="workMonths"> </span> months. </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

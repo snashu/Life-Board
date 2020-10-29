@@ -1,0 +1,35 @@
+.SnashuHeader {
+    text-align: center;
+}
+
+.SnashuMoneyAmt {
+    font-weight: bold;
+}
+
+.SnashuContainerMain {
+    background: #c3edef;
+}
+
+.FinanceContainer {
+    margin-left: 100px;
+}
+
+.SnashuMoney {
+    font-size: 30px;
+}
+
+.SnashuLifeCard {
+	display: inline-block;
+	min-height: 275px;
+	float: left;
+    background: white;
+    padding: 25px;
+    width: 500px;
+    border-radius: 5px;
+    box-shadow: 1px 0 6px 1px #8c8787;
+    margin-left: 20px;
+}
+
+.IndiaTrips {
+    font-weight: bold;
+}
