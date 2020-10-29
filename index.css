@@ -21,6 +21,7 @@
 .SnashuLifeCard {
 	display: inline-block;
 	min-height: 275px;
+    margin-top: 20px;
 	float: left;
     background: white;
     padding: 25px;
