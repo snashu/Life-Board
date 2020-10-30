@@ -42,9 +42,15 @@ const calculateTimeWorked = () => {
 	return time
 }
 
+const calculateDosa = (rupees) => {
+    let dosaCost = 75
+    return Math.ceil(rupees / dosaCost)
+}
 
 let money = document.getElementById("SnashuMoneyAmt")
-money.innerHTML = (currentIncome + secondIncome).toFixed(2)
+money.innerHTML = (currentIncome + secondIncome).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+let rupees = document.getElementById("SnashuRupeeAmt")
+rupees.innerHTML = ((currentIncome + secondIncome) * 74).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 let indiaTrips = document.getElementById("IndiaTrips")
 indiaTrips.innerHTML = calculateRoundTrips()
@@ -56,6 +62,9 @@ diveTrips.innerHTML = calculateDiveCost()
 let diveTripsInterest = document.getElementById("TotalDivesInterest")
 diveTripsInterest.innerHTML = calculateDiveCost(true)
 
+let dosa = document.getElementById("SnashuDosaAmt")
+dosa.innerHTML = calculateDosa(((currentIncome + secondIncome) * 74)).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
 let workYears = document.getElementById("workYears")
 let time = calculateTimeWorked()
 workYears.innerHTML = time[0]
@@ -65,8 +74,10 @@ workMonths.innerHTML = time[1]
 
 setInterval(() => {
     currentIncome += secondIncome
-    money.innerHTML = (currentIncome + secondIncome).toFixed(2)
+    money.innerHTML = (currentIncome + secondIncome).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    rupees.innerHTML = ((currentIncome + secondIncome) * 74).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     indiaTrips.innerHTML = calculateRoundTrips()
+    dosa.innerHTML = calculateDosa(((currentIncome + secondIncome) * 74)).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     IndiaTripsInterest.innerHTML = calculateRoundTrips(true)
     diveTrips.innerHTML = calculateDiveCost()
     diveTripsInterest.innerHTML = calculateDiveCost(true)
