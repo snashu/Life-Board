@@ -74,3 +74,23 @@ setInterval(() => {
     workYears.innerHTML = time[0]
     workMonths.innerHTML = time[1]
 }, 1000)
+
+// Maximum Woze
+const StartWoze = async() => {
+    let audio = document.getElementById("music")
+    audio.play()
+    for (let i = 0; i < 4; i++) {
+        await moveImages(i + 1)
+    }
+}
+
+
+const moveImages = (i) => {
+    let image = document.getElementById("cozy" + i)
+    image.classList.add("cozyGifActive")
+    return new Promise((resolve, reject) => {
+        setTimeout(async() => {
+            resolve()
+        }, 10000)
+    })
+}
